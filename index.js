@@ -812,11 +812,8 @@ exec('wget "' + text + '" -O mp4/'+ namafile +'.mp4', (error, stdout, stderr) =>
           msg.reply(
             `*BERHASIL..!!!*
 Judul : ${judul1}
-			  
-			  
- _ Instagram Downloader By LawBot _
- 
- Sedang mengirimkan video .. 🎬`
+
+_Sedang mengirimkan video .._🎬`
           );
 
 exec('wget "' + text + '" -O mp4/'+ namafile +'.jpg', (error, stdout, stderr) => {
@@ -932,8 +929,7 @@ msg.reply(`
  
  
  ----------------------------------
-  _ LawBot 2020_
- 
+*AZ-WhatsApp © 2020* 
  `); 
 });
 }
@@ -969,8 +965,7 @@ msg.reply(`
  
  
  ----------------------------------
-  _ LawBot 2020 _
- 
+*AZ-WhatsApp © 2020*  
  `); 
 });
 }
@@ -1212,8 +1207,7 @@ Artis : *${data.artist}*
 
    ----------------------------------
 👾                          👾
-  _Ytmp3 WhatsApp By LawBot
-`);
+*AZ-WhatsApp © 2020* `);
 chat.sendMessage(musik);
 });
 YD.on("error", function(error) {
@@ -1224,7 +1218,7 @@ YD.on("error", function(error) {
 }
 
 else if (msg.body.startsWith("!tts")) {
-	msg.reply('ketik !menu untuk melihat list menu bot | wa.me/6285225145663');
+	msg.reply('ketik !menu untuk melihat list menu bot | AZ Bot');
 	var texttomp3 = require("text-to-mp3");
     var fs = require("fs");
 
@@ -1362,9 +1356,7 @@ msg.reply(
   ----------------------------------
          Nama _*${nama}*_ ${h}
   ----------------------------------
-
-  _LawBot_
-`
+*AZ-WhatsApp © 2020* `
         );
 });
 }
@@ -1398,9 +1390,7 @@ console.log(""+ h);
   ----------------------------------
          Nama ${h}
   ----------------------------------
-
-  _Primbon WhatsApp By LawBot_
-`
+*AZ-WhatsApp © 2020* `
         );
 });
   }
@@ -1709,7 +1699,7 @@ exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
     client.sendMessage(msg.from, "Gabut bangettt sihhh.. 🤭");
   }
   else if (msg.body == "save euy" || msg.body == "save donk" || msg.body == "Save euy" || msg.body == "Save donk") {
-    client.sendMessage(msg.from, "Gas keun, ini chat ke sini aja -> wa.me/6285225145663, itu akun real ku ^_^")
+    client.sendMessage(msg.from, "Gas keun, ini chat ke sini aja -> wa.me/6281342077268, itu akun real ku ^_^")
   }
   else if (msg.body == "kamu bot?") {
     client.sendMessage(msg.from, "y")
@@ -1722,76 +1712,85 @@ exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
     client.sendMesssage(msg.from, "Waalaikumusallam");
   }else if (msg.body == "!menu") {
  client.sendMessage(msg.from,  `
-*SELAMAT DATANG ^_^*
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
 
-
-_Hai kawan, sebelum memakai bot ini patuhi rules dulu ya ._
-Ketikan *!rules* untuk melihat rules memakai bot ini
-
-			️*List Menu*️️
-			
+Berikut daftar perintah yang bisa digunakan :			
 ➡️ !admin = Menu Khusus Admin Grup🏅
 ➡️ !menu1 = Fun Menu 🌞
 ➡️ !menu2 = Downloader Menu🎞
 ➡️ !menu3 = Horoscope Menu 🎇
 ➡️ NSFW Menu 🚫
 
-
+*AZ-WhatsApp © 2020* 
 
 `);
 }
 else if (msg.body == "!admin") {
  client.sendMessage(msg.from,  `
- *!subject* = Ganti nama grup.
- *!kick* = Kick member grup.
- *!promote* = Promote admin grup.
- *!demote* = Menurunkan admin group.
- *!add* = Menambah member group.
- *!deskripsi* = Ganti deskripsi grup.
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
+• *!subject* = Ganti nama grup.
+• *!kick* = Kick member grup.
+• *!promote* = Promote admin grup.
+• *!demote* = Menurunkan admin group.
+• *!add* = Menambah member group.
+• *!deskripsi* = Ganti deskripsi grup.
  `);
  }
  
  else if (msg.body == "!menu1") {
  client.sendMessage(msg.from,  `
-*!randomanime* = untuk melihat gambar anime secara random
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
 
-*!quotes* : Melihat quotes dari tokoh terkenal
+• *!randomanime* = untuk melihat gambar anime secara random
 
-*!play nama lagu*
+• *!quotes* : Melihat quotes dari tokoh terkenal
+
+• *!play nama lagu*
 contoh: *!play whatever it takes*
-*!wait* : Menampilkan informasi anime dengan mengirim gambar dengan caption !wait
 
-*!brainly* : Menampilkan jawaban yang terdapat pada brainly.
+• *!wait* : Menampilkan informasi anime dengan mengirim gambar dengan caption !wait
+
+• *!brainly* : Menampilkan jawaban yang terdapat pada brainly.
 contoh : !brainly siapa penemu motor
 
-*!translate* : Menerjemahkan kedalam bahasa yang di inginkan
+• *!translate* : Menerjemahkan kedalam bahasa yang di inginkan
  contoh : _!translate [en] kamu mau jadipacar aku ga sayang ?_
  _untuk code bahasa bisa di cek dengan perintah *#codebahasa*
 
-*!tts* : Mengubah teks kedalam suara / teks to speech
+• *!tts* : Mengubah teks kedalam suara / teks to speech
  contoh : _!tts kamu mau jadipacar aku ga sayang ?_
  
-*!lirik* : Mencari lirik lagu
+• *!lirik* : Mencari lirik lagu
 contoh (Jika mengetahui nama artis) : !lirik alan walker - faded
 contoh (Jika tidak mengetahui nama artis) : !lirik - faded
 `);
  }
 else if (msg.body == "!menu2") {
  client.sendMessage(msg.from,  `
- 
- *!yt* : Mendownload video dari youtube
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
+• *!yt* : Mendownload video dari youtube
 contoh : !yt https://youtu.be/K9jR4hSCbG4
 
-*!ytmp3* : Mendownload mp3 dari youtube
+• *!ytmp3* : Mendownload mp3 dari youtube
 contoh : !ytmp3 https://youtu.be/xUVz4nRmxn4
 
-*!fb* : Mendownload video dari facebook
+• *!fb* : Mendownload video dari facebook
 contoh : !fb url
 
-*!igp* : Mendownload media fotodari instagram
+• *!igp* : Mendownload media fotodari instagram
 contoh : !igp url
 
-*!igv* : Mendownload video dari instagram
+• *!igv* : Mendownload video dari instagram
 contoh : !igv url
 
 `);
@@ -1799,16 +1798,20 @@ contoh : !igv url
 
 else if (msg.body == "!menu3") {
 	client.sendMessage (msg.from, `
-*!nama* : Melihat arti dari nama kamu
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
+• *!nama* : Melihat arti dari nama kamu
  contoh : !nama Bondan
 
-*!sifat* : cari sifat berdasarkan nama dan tanggal lahir
+• *!sifat* : cari sifat berdasarkan nama dan tanggal lahir
 contoh : !sifat [Bondan] 31-08-1999
 
-*!sial* : Check hari apes mu berdasarkan tanggal lahir.
+• *!sial* : Check hari apes mu berdasarkan tanggal lahir.
 contoh : !sial 17 08 1945
 
-*!pasangan* : Check kecocokan jodoh
+• *!pasangan* : Check kecocokan jodoh
  contoh : !pasangan Dimas & Dinda
 `);
 }	
@@ -1823,12 +1826,15 @@ msg.reply(" Hallo umur kamu belum cukup untuk menampilkan menu ini");
 }else{
 
  client.sendMessage(msg.from,  `
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
+ • *!randomhentai* = untuk melihat gambar anime secara random
  
- *!randomhentai* = untuk melihat gambar anime secara random
+• *!nh*  kode = untuk melihat info kode nhentai 
  
- *!nh*  kode = untuk melihat info kode nhentai 
- 
- *!doujinshi* = untuk mendownload manga dalam bentuk file pdf
+• *!doujinshi* = untuk mendownload manga dalam bentuk file pdf
  
  `
 );
@@ -1836,18 +1842,24 @@ msg.reply(" Hallo umur kamu belum cukup untuk menampilkan menu ini");
 }
   else if (msg.body == "#cekresi") {
 	  msg.reply(`
-	  *!jnt kode resi*
-	  *!jne kode resi*
-	  *!sicepat kode resi*
-	  *!sap kode resi*
-	  *!pcp kode resi*
-	  *!lex kode resi*
-	  
-	  _ Tracking Kurir By Law Bot _
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
+• *!jnt kode resi*
+• *!jne kode resi*
+• *!sicepat kode resi*
+• *!sap kode resi*
+• *!pcp kode resi*
+• *!lex kode resi*
 	  `);
   }
   else if (msg.body == "#codebahasa") {
     msg.reply(`
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Versi : *1.2*
+
 	Bahasa                Code
 ######               #####
 English                 |  en
@@ -2018,8 +2030,6 @@ YD.on("finished", function(err, data) {
 
 const musik = MessageMedia.fromFilePath(data.file);
 msg.reply(` 
- 
-
  🎶 Now Playing 🎶
 
 🔉  *${data.videoTitle}* 
