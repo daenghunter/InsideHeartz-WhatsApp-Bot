@@ -139,7 +139,7 @@ client.on('group_join', async (notification) => {
     console.log('join', notification);
     const botno = notification.chatId.split('@')[0];
     let number = await notification.id.remote;
-    client.sendMessage(number, `Hai perkenalkan aku Law Bot, selamat datang di group ini`);
+    client.sendMessage(number, `Halo, selamat bergabung di grup ini yaa.. untuk melihat daftar perintah bot silahkan reply *!menu* .`);
   
     const chats = await client.getChats();
     for (i in chats) {
@@ -159,7 +159,7 @@ client.on('group_join', async (notification) => {
         if (participant.isAdmin) {
             //admins.push(participant.id.user);
             admins[contact.pushname] = participant.id.user;
-            client.sendMessage(participant.id._serialized, 'Hai admin, ada member baru di group mu');
+            client.sendMessage(participant.id._serialized, 'Eh bro, barusan ada member baru di grup.');
             const media = MessageMedia.fromFilePath('./test/test.pdf');
             client.sendMessage(participant.id._serialized, media);
         }
@@ -196,7 +196,7 @@ client.on('group_leave', async (notification) => {
         if (participant.isAdmin) {
             //admins.push(participant.id.user);
             admins[contact.pushname] = participant.id.user;
-            client.sendMessage(participant.id._serialized, 'Hai admin, ada member yang keluar di group mu');
+            client.sendMessage(participant.id._serialized, 'Eh bro, ada yang keluar dari grup wkwkw');
             const media = MessageMedia.fromFilePath('./test/test.pdf');
             client.sendMessage(participant.id._serialized, media);
         }
@@ -229,11 +229,11 @@ client.on("message", async msg => {
 	participant
 	`)
 const botTol = () => {
-        msg.reply('[!] Maaf, fitur ini hanya untuk admin(owner).')
+        msg.reply('*Akses Untuk Menu Admin Ditolak*')
         return
     }
     const botTol2 = () => {
-        msg.reply(`[!] Maaf, fitur ini hanya untuk 'Group Chat'.`)
+        msg.reply(`*Akses ini hanya untuk di grup saja bro*`)
         return
     }
 
@@ -258,7 +258,7 @@ const botTol = () => {
             const contact = await client.getContactById(participant.id._serialized);
 
             mentions.push(contact);
-			text += "Hai ";
+			text += "Hay Beb ";
             text += `@${participant.id.user} `;
 			text += "\n";
         }
@@ -305,7 +305,7 @@ const botTol = () => {
                 let title = msg.body.slice(5)
                 if (title.indexOf('62') == -1) {
                     chat.addParticipants([`${title.replace('0', '62')}@c.us`])
-                    msg.reply(`[:] Selamat datang @${title}! jangan lupa baca Deskripsi group yah 😎👊🏻`)
+                    msg.reply(`Selamat datang @${title}! Gunakan Command *!menu* untuk melihat daftar perintah.`)
                 } else {
                     msg.reply('[:] Format nomor harus 0821xxxxxx')
                 }
@@ -342,9 +342,9 @@ const botTol = () => {
     // Send a new message as a reply to the current one
     msg.reply("kirim !menu atau !help untuk melihat menu.");
   }
-  else if (msg.body == "!ping reply") {
+  else if (msg.body == "!ping") {
     // Send a new message as a reply to the current one
-    msg.reply("pong");
+    msg.reply("_Sudah Aktif_");
   }else if (msg.body.startsWith("!anime")) {
 var fs = require('fs');
 var files = fs.readdirSync('./kwpin')
@@ -531,10 +531,7 @@ client.sendMessage(media);
           msg.reply(
             `*BERHASIL!!!*
 Judul : ${judul1}
-			  
-			  
- _ Facebook Downloader By LawBot _`
-          );
+			            );
 		  
 exec('wget "' + text + '" -O mp4/'+ namafile +'.mp4', (error, stdout, stderr) => {
   const media = MessageMedia.fromFilePath('mp4/'+ namafile +'.mp4');
@@ -719,10 +716,7 @@ chat.sendMessage(media);
           msg.reply(
             `*BERHASIL..!!!*
 Judul : ${judul1}
-			  
-			  
- _ Instagram Downloader By LawBot _
- 
+			   
  Sedang mengirimkan video .. 🎬`
           );
 
@@ -861,7 +855,7 @@ var hh = msg.body.split("!brainly ")[1]
 var tanya = hh.replace(/ /g, "%20");
 const fetch = require('node-fetch')
 
-const url = "https://tools.aqin.my.id/api/brainly/?q="+ tanya
+const url = "https://amiruldev.com/brainly/?q="+ tanya
 var regex = /<br\s*[\/]?>/gi;
 const solution = () => {
   fetch(url).then(res => res.json()).then((res) => {
@@ -872,20 +866,21 @@ res.data.questionSearch.edges.slice(-2).forEach(item => {
  var jawaban = item['content']
  var g = jawaban.replace(regex, "\n")
  var h  = g.replace(/<[^>]*>?/gm, '');
-  msg.reply(
-        `
-        
-      ======================
-	  
-        Pertanyaan : 
+  msg.reply(`
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!Brainly*
+            
+======================
+Pertanyaan : 
 		
       *${tanyaan.replace(regex, "\n")}*
       
-      
-      Jawaban : 
+Jawaban : 
 	  
       *${h}*
-	  ======================
+      
+======================
       `);
    
       })
@@ -919,16 +914,15 @@ var y = $.html().split('<b>PRIMBON HARI NAAS</b><br><br>')[1];
     var d = h.replace("&amp;", '&')
 console.log(""+ d);
 msg.reply(` 
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!sial*
 
 -----------------------------------
-
  Cek Hari Naas Kamu ~
  
- 
  ${d}
- 
- 
- ----------------------------------
+----------------------------------
 *AZ-WhatsApp © 2020* 
  `); 
 });
@@ -955,6 +949,9 @@ var y = $.html().split('<b>KECOCOKAN JODOH BERDASARKAN NAMA PASANGAN</b><br><br>
     var d = h.replace("&amp;", '&')
 console.log(""+ d);
 msg.reply(` 
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!Pasangan*
 
 -----------------------------------
 
@@ -963,8 +960,7 @@ msg.reply(`
  
  ${d}
  
- 
- ----------------------------------
+----------------------------------
 *AZ-WhatsApp © 2020*  
  `); 
 });
@@ -990,6 +986,10 @@ const queryOptions = {
 indeed.query(queryOptions).then(res => {
 client.sendMessage(msg.from, 
 `
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!loker*
+
 ==============================
 Nama Posisi :  *${res[0].title}*
 
@@ -1196,9 +1196,11 @@ YD.on("finished", function(err, data) {
 var musik = MessageMedia.fromFilePath(data.file);
 
 msg.reply(` 
- 
-   Mp3 Berhasil di download
-   
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!ytmp3*
+
+-=[ Convert YT To MP3 ]=-   
   ----------------------------------
 
 Nama File : *${data.videoTitle}*
@@ -1206,7 +1208,6 @@ Nama : *${data.title}*
 Artis : *${data.artist}*
 
    ----------------------------------
-👾                          👾
 *AZ-WhatsApp © 2020* `);
 chat.sendMessage(musik);
 });
@@ -1298,7 +1299,6 @@ client.sendMessage(
      _${kata}_
         
     
-
 	*~${author}*
          `
       );
@@ -1324,7 +1324,6 @@ client.sendMessage(
      _${kata}_
         
     
-
 	*~${author}*
          `
       );
@@ -1349,8 +1348,11 @@ request.get({
     var x = f.replace(/<br\s*[\/]?>/gi, "\n");
     var h  = x.replace(/<[^>]*>?/gm, '');
 console.log(""+ h);
-msg.reply(
-            `
+msg.reply(`
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!nama*
+   
       *Arti Dari Namamu*
 
   ----------------------------------
@@ -1385,6 +1387,10 @@ request.post({
 console.log(""+ h);
             msg.reply(
             `
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!sifat*
+
             *Sifat Dari Nama dan Tanggal Lahir*
          
   ----------------------------------
@@ -1596,11 +1602,13 @@ chat.sendMessage(media);
     msg.body === "rules ") {
     // Send a new message to the same chat
     client.sendMessage(msg.from, ` 
-	Rules ... !!!
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!rules*
 
+-=[ RULES AZ BOT ]=-
 
-• *Jangan spam bot ..*
- 
+• *Jangan spam bot ..* 
 • *Jangan rusuh kalo bot gaaktif*
 • *Jangan telfon / vc bot nya ..*
      ( _auto block_ )
@@ -1623,7 +1631,7 @@ bot ini
 
 	`);
   }
- else if (msg.body == "!randomhentai") {
+ else if (msg.body == "6") {
 const cheerio = require('cheerio');
 const request = require('request');
 
@@ -1653,21 +1661,51 @@ exec('wget "' + d.url + '" -O ok.jpg', (error, stdout, stderr) => {
 });
 });
 }
-else if (msg.body == "!randomanime") {
+else if (msg.body == "7") {
 const cheerio = require('cheerio');
 const request = require('request');
 
 const { exec } = require("child_process");
 request.get({
   headers: {'content-type' : 'application/x-www-form-urlencoded'},
-  url:     'https://api.computerfreaker.cf/v1/anime',
+  url:     'https://api.computerfreaker.cf/v1/dva',
  
 },function(error, response, body){
     let $ = cheerio.load(body);
     var d = JSON.parse(body);
 console.log(d.url); 
-exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
-	var media = MessageMedia.fromFilePath('anime/nime.jpg');
+exec('wget "' + d.url + '" -O adv.jpg', (error, stdout, stderr) => {
+	var media = MessageMedia.fromFilePath('adv.jpg');
+
+	chat.sendMessage(media);
+	if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+
+    console.log(`stdout: ${stdout}`);
+});
+});
+}
+ else if (msg.body == "6") {
+const cheerio = require('cheerio');
+const request = require('request');
+
+const { exec } = require("child_process");
+request.get({
+  headers: {'content-type' : 'application/x-www-form-urlencoded'},
+  url:     'https://api.computerfreaker.cf/v1/nsfwneko',
+ 
+},function(error, response, body){
+    let $ = cheerio.load(body);
+    var d = JSON.parse(body);
+console.log(d.url); 
+exec('wget "' + d.url + '" -O ok.jpg', (error, stdout, stderr) => {
+	var media = MessageMedia.fromFilePath('ok.jpg');
 
 	chat.sendMessage(media);
 	if (error) {
@@ -1712,22 +1750,23 @@ exec('wget "' + d.url + '" -O anime/nime.jpg', (error, stdout, stderr) => {
     client.sendMesssage(msg.from, "Waalaikumusallam");
   }else if (msg.body == "!menu") {
  client.sendMessage(msg.from,  `
-Nama : *AZ-WhatsApp Bot*
+Nama : *AZ WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
-Versi : *1.2*
+Jenis Perintah : *!menu*
 
 Berikut daftar perintah yang bisa digunakan :			
-➡️ !admin = Menu Khusus Admin Grup🏅
-➡️ !menu1 = Fun Menu 🌞
-➡️ !menu2 = Downloader Menu🎞
-➡️ !menu3 = Horoscope Menu 🎇
-➡️ NSFW Menu 🚫
-
-*AZ-WhatsApp © 2020* 
-
+• *0* : Menu Admin
+• *1* : Menu Utama
+• *2* : Menu Downloader
+• *3* : Menu Horoscape
+• *4* : Menu Cek Resi
+• *5* : Random Anime
+• *6* : Random Hentai
+• *7* : Random ADV
+• *8* : Logo Maker Bot
 `);
 }
-else if (msg.body == "!admin") {
+else if (msg.body == "0") {
  client.sendMessage(msg.from,  `
 Nama : *AZ-WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
@@ -1742,7 +1781,7 @@ Versi : *1.2*
  `);
  }
  
- else if (msg.body == "!menu1") {
+ else if (msg.body == "1") {
  client.sendMessage(msg.from,  `
 Nama : *AZ-WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
@@ -1772,7 +1811,7 @@ contoh (Jika mengetahui nama artis) : !lirik alan walker - faded
 contoh (Jika tidak mengetahui nama artis) : !lirik - faded
 `);
  }
-else if (msg.body == "!menu2") {
+else if (msg.body == "2") {
  client.sendMessage(msg.from,  `
 Nama : *AZ-WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
@@ -1796,7 +1835,7 @@ contoh : !igv url
 `);
 }
 
-else if (msg.body == "!menu3") {
+else if (msg.body == "3") {
 	client.sendMessage (msg.from, `
 Nama : *AZ-WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
@@ -1813,6 +1852,18 @@ contoh : !sial 17 08 1945
 
 • *!pasangan* : Check kecocokan jodoh
  contoh : !pasangan Dimas & Dinda
+`);
+}	
+else if (msg.body == "8") {
+	client.sendMessage (msg.from, `
+Nama : *AZ-WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+
+Generate Maker Text
+
+• *!glowtext* Namamu
+• *!jokertext* Namamu
+• *!galaxy* Namamu
 `);
 }	
 
@@ -1840,7 +1891,7 @@ Versi : *1.2*
 );
 }
 }
-  else if (msg.body == "#cekresi") {
+  else if (msg.body == "4") {
 	  msg.reply(`
 Nama : *AZ-WhatsApp Bot*
 Dibuat Oleh : *Alif Putra Darmawan*
@@ -1851,7 +1902,7 @@ Versi : *1.2*
 • *!sicepat kode resi*
 • *!sap kode resi*
 • *!pcp kode resi*
-• *!lex kode resi*
+• *!lex kode resi*
 	  `);
   }
   else if (msg.body == "#codebahasa") {
@@ -1950,7 +2001,7 @@ Yiddish                 |  yi
 Yoruba                  |  yo
 Zulu                      |  zu
       ` );
-  } else if (msg.body == "!leave") {
+  } else if (msg.body == "out sana") {
     // Leave the group
     let chat = await msg.getChat();
     if (chat.isGroup) {
@@ -2030,7 +2081,11 @@ YD.on("finished", function(err, data) {
 
 const musik = MessageMedia.fromFilePath(data.file);
 msg.reply(` 
- 🎶 Now Playing 🎶
+Nama : *AZ WhatsApp Bot*
+Dibuat Oleh : *Alif Putra Darmawan*
+Jenis Perintah : *!play* Request Lagu
+
+_Harap diketahui, Demi Kepentingan Bersama! Tolong Jangan Request Yang Aneh Aneh ataupun Request Dengan Durasi 1-3 Jam. karena Akan Mengakibatkan Bot Otomatis Mati._
 
 🔉  *${data.videoTitle}* 
 `);
