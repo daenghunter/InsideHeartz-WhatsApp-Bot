@@ -486,6 +486,191 @@ client.sendMessage(media);
 	 
   })();
  }
+   else if (msg.body.startsWith("!neon ")) {
+   msg.reply("sebentarr.. kita proses dulu")
+    var h = msg.body.split("!neon ")[1];
+
+    const { exec } = require("child_process");
+
+  (async () => {
+    const browser = await puppeteer.launch({
+      headless: false,
+
+    });
+    const page = await browser.newPage();
+    await page
+      .goto("https://en.ephoto360.com/making-neon-light-text-effect-with-galaxy-style-521.html", {
+        waitUntil: "networkidle2",
+      })
+      .then(async () => {
+      await page.type("#text-0", h);
+    await page.click("#submit");
+    await new Promise(resolve => setTimeout(resolve, 10000));
+        try {
+         
+          await page.waitForSelector(
+            "#link-image"
+          );
+          const element = await page.$(
+         "div.thumbnail > img"
+          );
+          const text = await (await element.getProperty("src")).jsonValue();
+         console.log(text);
+
+        exec('wget "' + text + '" -O mp4/neon.jpg', (error, stdout, stderr) => {
+  const media = MessageMedia.fromFilePath('mp4/neon.jpg');
+
+  chat.sendMessage(media);
+  if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+
+    console.log(`stdout: ${stdout}`);
+});
+          browser.close();
+        } catch (error) {
+          console.log(error);
+       
+
+        }
+      })
+      .catch((err) => {
+        console.log(error);
+    
+      });
+   
+   
+  })();
+ }
+
+  else if (msg.body.startsWith("!galaxy ")) {
+   msg.reply("sebentarr.. kita proses dulu")
+    var h = msg.body.split("!galaxy ")[1];
+
+    const { exec } = require("child_process");
+
+  (async () => {
+    const browser = await puppeteer.launch({
+      headless: false,
+
+    });
+    const page = await browser.newPage();
+    await page
+      .goto("https://en.ephoto360.com/wings-galaxy-206.html", {
+        waitUntil: "networkidle2",
+      })
+      .then(async () => {
+      await page.type("#text-0", h);
+    await page.click("#submit");
+    await new Promise(resolve => setTimeout(resolve, 10000));
+        try {
+         
+          await page.waitForSelector(
+            "#link-image"
+          );
+          const element = await page.$(
+         "div.thumbnail > img"
+          );
+          const text = await (await element.getProperty("src")).jsonValue();
+         console.log(text);
+
+        exec('wget "' + text + '" -O mp4/galaxy.jpg', (error, stdout, stderr) => {
+  const media = MessageMedia.fromFilePath('mp4/galaxy.jpg');
+
+  chat.sendMessage(media);
+  if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+
+    console.log(`stdout: ${stdout}`);
+});
+          browser.close();
+        } catch (error) {
+          console.log(error);
+       
+
+        }
+      })
+      .catch((err) => {
+        console.log(error);
+    
+      });
+   
+   
+  })();
+ }
+   else if (msg.body.startsWith("!galaxy1 ")) {
+   msg.reply("sebentarr.. kita proses dulu")
+    var h = msg.body.split("!galaxy1 ")[1];
+
+    const { exec } = require("child_process");
+
+  (async () => {
+    const browser = await puppeteer.launch({
+      headless: false,
+
+    });
+    const page = await browser.newPage();
+    await page
+      .goto("https://en.ephoto360.com/text-galaxy-tree-effect-288.html", {
+        waitUntil: "networkidle2",
+      })
+      .then(async () => {
+      await page.type("#text-0", h);
+    await page.click("#submit");
+    await new Promise(resolve => setTimeout(resolve, 10000));
+        try {
+         
+          await page.waitForSelector(
+            "#link-image"
+          );
+          const element = await page.$(
+         "div.thumbnail > img"
+          );
+          const text = await (await element.getProperty("src")).jsonValue();
+         console.log(text);
+
+        exec('wget "' + text + '" -O mp4/galaxy1.jpg', (error, stdout, stderr) => {
+  const media = MessageMedia.fromFilePath('mp4/galaxy1.jpg');
+
+  chat.sendMessage(media);
+  if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+
+    console.log(`stdout: ${stdout}`);
+});
+          browser.close();
+        } catch (error) {
+          console.log(error);
+       
+
+        }
+      })
+      .catch((err) => {
+        console.log(error);
+    
+      });
+   
+   
+  })();
+ }
+
   else if (msg.body.startsWith("!fb ")) {
     msg.reply(`*Hai, Kita Proses Dulu Ya . . .*`);
     let link = msg.body.split(" ")[1];
@@ -530,8 +715,7 @@ client.sendMessage(media);
           );
           msg.reply(
             `*BERHASIL!!!*
-Judul : ${judul1}
-			            );
+			       `     );
 		  
 exec('wget "' + text + '" -O mp4/'+ namafile +'.mp4', (error, stdout, stderr) => {
   const media = MessageMedia.fromFilePath('mp4/'+ namafile +'.mp4');
@@ -715,8 +899,7 @@ chat.sendMessage(media);
           );
           msg.reply(
             `*BERHASIL..!!!*
-Judul : ${judul1}
-			   
+ 
  Sedang mengirimkan video .. 🎬`
           );
 
@@ -805,8 +988,6 @@ exec('wget "' + text + '" -O mp4/'+ namafile +'.mp4', (error, stdout, stderr) =>
           );
           msg.reply(
             `*BERHASIL..!!!*
-Judul : ${judul1}
-
 _Sedang mengirimkan video .._🎬`
           );
 
@@ -961,7 +1142,8 @@ Jenis Perintah : *!Pasangan*
  ${d}
  
 ----------------------------------
-*AZ-WhatsApp © 2020*  
+*AZ-WhatsApp © 2020* 
+ 
  `); 
 });
 }
@@ -1208,7 +1390,8 @@ Nama : *${data.title}*
 Artis : *${data.artist}*
 
    ----------------------------------
-*AZ-WhatsApp © 2020* `);
+*AZ-WhatsApp © 2020* 
+`);
 chat.sendMessage(musik);
 });
 YD.on("error", function(error) {
@@ -1358,7 +1541,8 @@ Jenis Perintah : *!nama*
   ----------------------------------
          Nama _*${nama}*_ ${h}
   ----------------------------------
-*AZ-WhatsApp © 2020* `
+*AZ-WhatsApp © 2020* 
+`
         );
 });
 }
@@ -1396,7 +1580,8 @@ Jenis Perintah : *!sifat*
   ----------------------------------
          Nama ${h}
   ----------------------------------
-*AZ-WhatsApp © 2020* `
+*AZ-WhatsApp © 2020* 
+`
         );
 });
   }
@@ -1864,6 +2049,8 @@ Generate Maker Text
 • *!glowtext* Namamu
 • *!jokertext* Namamu
 • *!galaxy* Namamu
+• *!galaxy1* Namamu
+• *!neon* Namamu
 `);
 }	
 
